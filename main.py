@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtWidgets import QMainWindow
 from password import Ui_MainWindow
+import random
 
 class Widget(QMainWindow):
     def __init__(self):
@@ -24,13 +25,10 @@ class Widget(QMainWindow):
                 pas = pas + random.choice(s_number + s_alphabet)
         self.ui.result.setText(pas)
 
-    def generation():
-        digtal = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-        letter = ['g', 'l', 'e', 'g', 'd', 'a', 'p', 'k', 'q', 's']
-        if self.ui.cb_number.isChecked():
 
 app = QApplication([])
 window = Widget()
 
 window.show()
 app.exec_()
+
